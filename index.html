@@ -152,12 +152,19 @@ footer p+p{margin-top:8px}
   <!-- 7. RECOMENDACIONES -->
   <section id="recomendaciones">
     <h2>Recomendaciones</h2>
-    <div class="empty">
-      <p><strong>Espacio reservado para futuras recomendaciones.</strong></p>
-      <p>Aquí se publicarán testimonios de docentes, empresas o compañeros, siempre con su autorización.</p>
+    <div class="grid">
+      <div class="item">
+        <span class="pill">Referente profesional</span>
+        <h3>Ing. Henry Tigre</h3>
+        <p class="mut">Coordinador de Innovación</p>
+        <!-- TODO: cuando el Ing. Tigre autorice su recomendación, pega aquí su texto:
+        <p class="mut" style="margin-top:10px">"Texto de la recomendación"</p> -->
+      </div>
     </div>
-    <!-- Cuando tengas una, reemplaza el bloque anterior por:
-    <div class="item"><p class="mut">"Texto de la recomendación"</p><h3>Nombre — Cargo, Empresa</h3></div> -->
+
+    <h3 style="margin:28px 0 8px">Deja tu recomendación</h3>
+    <p class="mut" style="margin-bottom:14px">Docentes, compañeros o empresas pueden dejar su comentario aquí. Aparecerá como un bloque en esta sección.</p>
+    <div id="comentarios"></div>
   </section>
 </main>
 
@@ -165,5 +172,19 @@ footer p+p{margin-top:8px}
   <p>© 2026 Franklin Sebastián Carrión Astudillo.</p>
   <p><strong>Nota sobre IA:</strong> Utilicé Claude (Anthropic) para rediseñar la página (colores, estructura y código HTML/CSS), reorganizar las secciones según la consigna y redactar la presentación personal. Revisé y ajusté el contenido. El diseño de Capacitaciones fue creado por mí en Canva.</p>
 </footer>
+<script>
+/* Completa estos 3 valores con los datos que te da https://giscus.app */
+const GISCUS={repo:"",repoId:"",category:"Recomendaciones",categoryId:""};
+const box=document.getElementById('comentarios');
+if(GISCUS.repo&&GISCUS.repoId&&GISCUS.categoryId){
+  const s=document.createElement('script');
+  s.src='https://giscus.app/client.js';
+  const a={repo:GISCUS.repo,'repo-id':GISCUS.repoId,category:GISCUS.category,'category-id':GISCUS.categoryId,mapping:'pathname','reactions-enabled':'1','input-position':'top',theme:'dark',lang:'es'};
+  for(const k in a)s.setAttribute('data-'+k,a[k]);
+  s.crossOrigin='anonymous';s.async=true;box.appendChild(s);
+}else{
+  box.innerHTML='<div class="empty"><p>Los comentarios se activarán pronto. Mientras tanto, puedes enviar tu recomendación por correo.</p><a class="btn" href="mailto:Ayzaxbr@gmail.com?subject=Recomendación para tu perfil profesional">Enviar recomendación</a></div>';
+}
+</script>
 </body>
 </html>
