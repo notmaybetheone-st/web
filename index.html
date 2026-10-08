@@ -30,6 +30,8 @@ h2{font-size:1.4rem;margin-bottom:18px}h2::before{content:"";display:inline-bloc
 .item small{display:block;color:var(--mut);font-size:.75rem;margin-bottom:2px}
 .item h3{font-size:1.05rem;margin-bottom:6px}
 .pill{font-size:.75rem;background:#2a2112;color:var(--ac2);border-radius:6px;padding:2px 8px;font-family:monospace;display:inline-block;margin-bottom:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tags span{font-size:.72rem;border:1px solid var(--line);color:var(--mut);border-radius:99px;padding:2px 10px}
 .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:10px;background:var(--ac);color:#111;font-weight:600;font-size:.9rem}
 .btn:hover{background:var(--ac2);color:#111}
 .row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
@@ -79,16 +81,13 @@ footer p+p{margin-top:8px}
       <div class="item">
         <span class="pill">En curso</span>
         <h3>Tecnología Superior en Infraestructura y Plataformas TI</h3>
-        <p class="mut">3.er ciclo · [NOMBRE DE TU INSTITUTO]</p>
-        <!-- TODO: reemplaza # por el enlace del instituto o de la carrera -->
-        <a href="#" target="_blank" rel="noopener">Ver programa →</a>
+        <p class="mut">3.er ciclo · Universidad de Cuenca (UCuenca Tec)</p>
+        <a href="https://www.ucuenca.edu.ec/ucuencatec/administracion-de-infraestructura-y-plataformas-tecnologicas/" target="_blank" rel="noopener">Ver programa →</a>
       </div>
       <div class="item">
         <span class="pill">Completado</span>
         <h3>Bachiller en Ciencias</h3>
-        <p class="mut">Unidad Educativa · Cuenca</p>
-        <!-- TODO: enlace de tu colegio -->
-        <a href="#" target="_blank" rel="noopener">Ver institución →</a>
+        <p class="mut">Colegio Ciudad de Cuenca · Cuenca</p>
       </div>
     </div>
   </section>
@@ -96,16 +95,37 @@ footer p+p{margin-top:8px}
   <!-- 4. EXPERIENCIA -->
   <section id="experiencia">
     <h2>Experiencia y proyectos académicos</h2>
+    <p class="mut" style="margin-bottom:18px">Tengo experiencia práctica en la implementación y administración de servidores en entornos Linux y Windows Server, y en el diseño de redes cliente-servidor. He realizado dos servidores completos durante la carrera, además de mantenimiento y optimización de computadoras.</p>
     <div class="grid">
       <div class="item">
-        <span class="pill">Infraestructura y redes</span>
-        <h3>Servidores y redes LAN</h3>
-        <p class="mut">Configuración de servidores con <strong>Linux</strong> y <strong>Windows Server</strong>, servicio de correo electrónico y topologías de red LAN para interconectar equipos de forma estable y segura.</p>
+        <span class="pill">Servidor Linux · CentOS</span>
+        <h3>Servidor de servicios en Linux</h3>
+        <p class="mut">Instalación y configuración de un servidor con servicios web, archivos compartidos, resolución de nombres, acceso remoto seguro, telefonía IP y contenido multimedia.</p>
+        <div class="tags"><span>CentOS</span><span>Apache</span><span>Samba</span><span>SSH</span><span>DNS</span><span>VoIP</span><span>Plex</span></div>
+      </div>
+      <div class="item">
+        <span class="pill">Servidor Windows Server</span>
+        <h3>Servidor web y de correo en Windows</h3>
+        <p class="mut">Administración del dominio y de los usuarios, asignación de direcciones IP, publicación de un sitio web local en WordPress (diseño de interfaz, maquetación y configuración) y servicio de correo con cliente de escritorio.</p>
+        <div class="tags"><span>Active Directory</span><span>DHCP</span><span>DNS</span><span>WordPress</span><span>hMailServer</span><span>Thunderbird</span></div>
+      </div>
+      <div class="item">
+        <span class="pill">Redes de datos</span>
+        <h3>Redes cliente-servidor</h3>
+        <p class="mut">Diseño e interconexión de redes con routers y switches para asegurar la comunicación entre equipos. Primer ciclo con Cisco y segundo ciclo simulando topologías en GNS3.</p>
+        <div class="tags"><span>Cisco</span><span>GNS3</span><span>Routers</span><span>Switches</span></div>
       </div>
       <div class="item">
         <span class="pill">Desarrollo y bases de datos</span>
         <h3>Software de gestión de registros</h3>
-        <p class="mut">Desarrollo en equipo de una aplicación para negocios que inserta y gestiona registros de personas, conectada a una <strong>base de datos relacional</strong> diseñada desde cero.</p>
+        <p class="mut">Proyecto en equipo de 5 personas: aplicación para negocios que inserta y gestiona registros de personas, conectada a una base de datos relacional. Mi aporte fue el <strong>diseño de las tablas</strong> y de la <strong>interfaz</strong>.</p>
+        <div class="tags"><span>MySQL</span><span>Diseño de tablas</span><span>Interfaz</span><span>Trabajo en equipo</span></div>
+      </div>
+      <div class="item">
+        <span class="pill">Soporte técnico</span>
+        <h3>Mantenimiento y optimización de computadoras</h3>
+        <p class="mut">Mantenimiento preventivo y correctivo de equipos, y optimización de su rendimiento.</p>
+        <div class="tags"><span>Hardware</span><span>Optimización</span><span>Soporte</span></div>
       </div>
     </div>
   </section>
