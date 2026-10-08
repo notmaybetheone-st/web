@@ -32,6 +32,10 @@ h2{font-size:1.4rem;margin-bottom:18px}h2::before{content:"";display:inline-bloc
 .pill{font-size:.75rem;background:#2a2112;color:var(--ac2);border-radius:6px;padding:2px 8px;font-family:monospace;display:inline-block;margin-bottom:8px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .tags span{font-size:.72rem;border:1px solid var(--line);color:var(--mut);border-radius:99px;padding:2px 10px}
+.feature{grid-column:1/-1;border-color:var(--ac);background:linear-gradient(135deg,#1d1a12,var(--bg))}
+.feature h3{font-size:1.3rem}
+.list{margin:14px 0 0 18px;color:var(--mut);font-size:.93rem}
+.list li{margin-bottom:6px}.list strong{color:var(--tx)}
 .btn{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:10px;background:var(--ac);color:#111;font-weight:600;font-size:.9rem}
 .btn:hover{background:var(--ac2);color:#111}
 .row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
@@ -97,6 +101,19 @@ footer p+p{margin-top:8px}
     <h2>Experiencia y proyectos académicos</h2>
     <p class="mut" style="margin-bottom:18px">Tengo experiencia práctica en la implementación y administración de servidores en entornos Linux y Windows Server, y en el diseño de redes cliente-servidor. He realizado dos servidores completos durante la carrera, además de mantenimiento y optimización de computadoras.</p>
     <div class="grid">
+      <div class="item feature">
+        <span class="pill">Especialidad · Soporte técnico</span>
+        <h3>Mantenimiento y optimización de computadoras</h3>
+        <p class="mut">Es el área donde tengo más experiencia práctica. Me enfoco en que un equipo funcione de forma estable, rápida y duradera, tanto en hardware como en software.</p>
+        <ul class="list">
+          <li><strong>Mantenimiento preventivo:</strong> limpieza interna, revisión de ventilación y temperaturas, y cuidado de componentes.</li>
+          <li><strong>Mantenimiento correctivo:</strong> diagnóstico de fallas de hardware y software, y reemplazo o ampliación de piezas (memoria RAM, discos, etc.).</li>
+          <li><strong>Optimización:</strong> instalación y configuración de sistemas operativos, control de programas de inicio, actualización de controladores y eliminación de software innecesario para recuperar rendimiento.</li>
+          <li><strong>Seguridad básica:</strong> instalación de antivirus, actualizaciones del sistema y respaldo de información.</li>
+        </ul>
+        <div class="tags"><span>Hardware</span><span>Diagnóstico</span><span>Optimización</span><span>Sistemas operativos</span><span>Soporte al usuario</span></div>
+      </div>
+    
       <div class="item">
         <span class="pill">Servidor Linux · CentOS</span>
         <h3>Servidor de servicios en Linux</h3>
@@ -120,12 +137,6 @@ footer p+p{margin-top:8px}
         <h3>Software de gestión de registros</h3>
         <p class="mut">Proyecto en equipo de 5 personas: aplicación para negocios que inserta y gestiona registros de personas, conectada a una base de datos relacional. Mi aporte fue el <strong>diseño de las tablas</strong> y de la <strong>interfaz</strong>.</p>
         <div class="tags"><span>MySQL</span><span>Diseño de tablas</span><span>Interfaz</span><span>Trabajo en equipo</span></div>
-      </div>
-      <div class="item">
-        <span class="pill">Soporte técnico</span>
-        <h3>Mantenimiento y optimización de computadoras</h3>
-        <p class="mut">Mantenimiento preventivo y correctivo de equipos, y optimización de su rendimiento.</p>
-        <div class="tags"><span>Hardware</span><span>Optimización</span><span>Soporte</span></div>
       </div>
     </div>
   </section>
@@ -161,10 +172,6 @@ footer p+p{margin-top:8px}
         <p class="mut" style="margin-top:10px">"Texto de la recomendación"</p> -->
       </div>
     </div>
-
-    <h3 style="margin:28px 0 8px">Deja tu recomendación</h3>
-    <p class="mut" style="margin-bottom:14px">Docentes, compañeros o empresas pueden dejar su comentario aquí. Aparecerá como un bloque en esta sección.</p>
-    <div id="comentarios"></div>
   </section>
 </main>
 
@@ -172,19 +179,5 @@ footer p+p{margin-top:8px}
   <p>© 2026 Franklin Sebastián Carrión Astudillo.</p>
   <p><strong>Nota sobre IA:</strong> Utilicé Claude (Anthropic) para rediseñar la página (colores, estructura y código HTML/CSS), reorganizar las secciones según la consigna y redactar la presentación personal. Revisé y ajusté el contenido. El diseño de Capacitaciones fue creado por mí en Canva.</p>
 </footer>
-<script>
-/* Completa estos 3 valores con los datos que te da https://giscus.app */
-const GISCUS={repo:"",repoId:"",category:"Recomendaciones",categoryId:""};
-const box=document.getElementById('comentarios');
-if(GISCUS.repo&&GISCUS.repoId&&GISCUS.categoryId){
-  const s=document.createElement('script');
-  s.src='https://giscus.app/client.js';
-  const a={repo:GISCUS.repo,'repo-id':GISCUS.repoId,category:GISCUS.category,'category-id':GISCUS.categoryId,mapping:'pathname','reactions-enabled':'1','input-position':'top',theme:'dark',lang:'es'};
-  for(const k in a)s.setAttribute('data-'+k,a[k]);
-  s.crossOrigin='anonymous';s.async=true;box.appendChild(s);
-}else{
-  box.innerHTML='<div class="empty"><p>Los comentarios se activarán pronto. Mientras tanto, puedes enviar tu recomendación por correo.</p><a class="btn" href="mailto:Ayzaxbr@gmail.com?subject=Recomendación para tu perfil profesional">Enviar recomendación</a></div>';
-}
-</script>
 </body>
 </html>
